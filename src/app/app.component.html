@@ -1,0 +1,28 @@
+<h2 style="text-align: center;">{{currenStatus}}</h2>
+
+<div style="margin: 0 auto; width: 200px;">
+  <div class="btn-group-vertical btn-group-lg" role="group" aria-label="Vertical button group">
+    <button type="button" class="btn btn-outline-primary difficulty-button" [class.difficulty-selected]="currentDifficulty == 0" (click)="setDiffculity(0)">Easy</button>
+    <button type="button" class="btn btn-outline-primary difficulty-button" [class.difficulty-selected]="currentDifficulty == 1" (click)="setDiffculity(1)">Medium</button>
+    <button type="button" class="btn btn-outline-primary difficulty-button" [class.difficulty-selected]="currentDifficulty == 2" (click)="setDiffculity(2)">Hard</button>
+  </div>
+  <button>Start</button>
+</div>
+
+<div class="currentGameWrapper" *ngIf="gameStarted == true">
+  <div class="row" >
+    <div class="square" (click)="clickedSqaure(0)">X</div>
+    <div class="square" (click)="clickedSqaure(1)">X</div>
+    <div class="square" (click)="clickedSqaure(2)">X</div>
+  </div>
+  <div class="row">
+    <div class="square" (click)="clickedSqaure(3)">X</div>
+    <div class="square" (click)="clickedSqaure(4)">X</div>
+    <div class="square" (click)="clickedSqaure(5)">X</div>
+  </div>
+  <div class="row">
+    <div class="square" (click)="clickedSqaure(6)">X</div>
+    <div class="square" (click)="clickedSqaure(7)">X</div>
+    <div class="square" (click)="clickedSqaure(8)">X</div>
+  </div>
+</div>
